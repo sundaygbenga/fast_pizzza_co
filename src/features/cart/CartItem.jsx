@@ -9,7 +9,7 @@ function CartItem({ item }) {
   const currentQuantity = useSelector(getCurrentQuantityById(pizzaId));
 
   return (
-    <li className="py-3 sm:flex sm:items-center sm:justify-between">
+    <li className="min-h-screen py-3 sm:flex sm:items-center sm:justify-between">
       <p className="mb-1 sm:mb-0">
         {quantity}&times; {name}
       </p>

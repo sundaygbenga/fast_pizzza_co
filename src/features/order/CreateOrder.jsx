@@ -44,13 +44,15 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
+      <h2 className="mb-8 text-xl font-semibold text-white">
+        Ready to order? Let's go!
+      </h2>
 
       {/* React router form: Lecture- Writing data with React router action */}
       {/* <Form method="POST" action="/order/new"> */}
       <Form method="POST" className="">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">First Name</label>
+          <label className="text-white sm:basis-40">First Name</label>
           <input
             className="input grow"
             type="text"
@@ -61,7 +63,7 @@ function CreateOrder() {
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">Phone number</label>
+          <label className="text-white sm:basis-40">Phone number</label>
           <div className="grow">
             <input className="input w-full" type="tel" name="phone" required />
             {formErrors?.phone && (
@@ -73,7 +75,7 @@ function CreateOrder() {
         </div>
 
         <div className="relative mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">Address</label>
+          <label className="text-white sm:basis-40">Address</label>
           <div className="grow">
             <input
               className="input w-full"
@@ -115,7 +117,9 @@ function CreateOrder() {
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to give your order priority?</label>
+          <label htmlFor="priority" className="text-white">
+            Want to give your order priority?
+          </label>
         </div>
 
         <div>
